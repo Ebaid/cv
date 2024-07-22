@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emad Ebaid -CV- عماد عبيد</title>
+    <title>Welcome - Choose Language</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,32 +13,83 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
+            overflow: hidden;
         }
         .container {
             text-align: center;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1;
         }
-        .language-selection {
-            margin: 20px 0;
+        h1 {
+            color: #333;
         }
-        .language-selection a {
-            margin: 0 10px;
-            padding: 10px 20px;
+        .language-button {
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #007bff;
             text-decoration: none;
-            color: #fff;
-            background-color: #007BFF;
             border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .language-button:hover {
+            background-color: #0056b3;
+        }
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .background-animation div {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(0, 123, 255, 0.2);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+        }
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="background-animation">
+        <div style="left: 25%; width: 80px; height: 80px; animation-delay: 0s;"></div>
+        <div style="left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s;"></div>
+        <div style="left: 70%; width: 20px; height: 20px; animation-delay: 4s;"></div>
+        <div style="left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s;"></div>
+        <div style="left: 65%; width: 20px; height: 20px; animation-delay: 0s;"></div>
+        <div style="left: 75%; width: 110px; height: 110px; animation-delay: 3s;"></div>
+        <div style="left: 35%; width: 150px; height: 150px; animation-delay: 7s;"></div>
+        <div style="left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s;"></div>
+        <div style="left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s;"></div>
+        <div style="left: 85%; width: 150px; height: 150px; animation-delay: 5s; animation-duration: 11s;"></div>
+    </div>
     <div class="container">
-        <h1>Welcome to Joy Boxaid's Personal Website</h1>
+        <h1>Welcome to My CV</h1>
         <p>Please select your preferred language:</p>
-        <div class="language-selection">
-            <a href="cv-en.html">English</a>
-            <a href="cv-ar.html">العربية</a>
-        </div>
+        <a href="cv_english.html" class="language-button">English</a>
+        <a href="cv_arabic.html" class="language-button">العربية</a>
     </div>
 </body>
 </html>
