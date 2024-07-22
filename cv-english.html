@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV - English</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .background-animation div {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(0, 123, 255, 0.2);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+        }
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation">
+        <div style="left: 25%; width: 80px; height: 80px; animation-delay: 0s;"></div>
+        <div style="left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s;"></div>
+        <div style="left: 70%; width: 20px; height: 20px; animation-delay: 4s;"></div>
+        <div style="left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s;"></div>
+        <div style="left: 65%; width: 20px; height: 20px; animation-delay: 0s;"></div>
+        <div style="left: 75%; width: 110px; height: 110px; animation-delay: 3s;"></div>
+        <div style="left: 35%; width: 150px; height: 150px; animation-delay: 7s;"></div>
+        <div style="left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s;"></div>
+        <div style="left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s;"></div>
+        <div style="left: 85%; width: 150px; height: 150px; animation-delay: 5s; animation-duration: 11s;"></div>
+    </div>
+    <div class="container">
+        <h1>Your Name</h1>
+        <p>Email: your.email@example.com | Phone: +1234567890 | Location: City, Country</p>
+        
+        <div class="section">
+            <h2>Summary</h2>
+            <p>A brief summary of your professional background and career objectives.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Education</h2>
+            <p>
+                <strong>Degree Name</strong><br>
+                University Name, Graduation Year<br>
+                Additional details or achievements
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>Work Experience</h2>
+            <p>
+                <strong>Job Title</strong><br>
+                Company Name, Start Date - End Date<br>
+                - Responsibility or achievement<br>
+                - Responsibility or achievement<br>
+                - Responsibility or achievement
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+                <li>Skill 4</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Languages</h2>
+            <ul>
+                <li>Language 1 - Proficiency level</li>
+                <li>Language 2 - Proficiency level</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>References</h2>
+            <p>Available upon request</p>
+        </div>
+    </div>
+</body>
+</html>
