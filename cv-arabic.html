@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرتي الذاتية - العربية</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .background-animation div {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(0, 123, 255, 0.2);
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+        }
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation">
+        <div style="right: 25%; width: 80px; height: 80px; animation-delay: 0s;"></div>
+        <div style="right: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s;"></div>
+        <div style="right: 70%; width: 20px; height: 20px; animation-delay: 4s;"></div>
+        <div style="right: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s;"></div>
+        <div style="right: 65%; width: 20px; height: 20px; animation-delay: 0s;"></div>
+        <div style="right: 75%; width: 110px; height: 110px; animation-delay: 3s;"></div>
+        <div style="right: 35%; width: 150px; height: 150px; animation-delay: 7s;"></div>
+        <div style="right: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s;"></div>
+        <div style="right: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s;"></div>
+        <div style="right: 85%; width: 150px; height: 150px; animation-delay: 5s; animation-duration: 11s;"></div>
+    </div>
+    <div class="container">
+        <h1>الاسم الكامل</h1>
+        <p>البريد الإلكتروني: your.email@example.com | الهاتف: +1234567890 | الموقع: المدينة، الدولة</p>
+        
+        <div class="section">
+            <h2>ملخص</h2>
+            <p>ملخص موجز عن خلفيتك المهنية وأهدافك الوظيفية.</p>
+        </div>
+        
+        <div class="section">
+            <h2>التعليم</h2>
+            <p>
+                <strong>اسم الشهادة</strong><br>
+                اسم الجامعة، سنة التخرج<br>
+                تفاصيل أو إنجازات إضافية
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>الخبرة العملية</h2>
+            <p>
+                <strong>المسمى الوظيفي</strong><br>
+                اسم الشركة، تاريخ البدء - تاريخ الانتهاء<br>
+                - مسؤولية أو إنجاز<br>
+                - مسؤولية أو إنجاز<br>
+                - مسؤولية أو إنجاز
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>المهارات</h2>
+            <ul>
+                <li>مهارة 1</li>
+                <li>مهارة 2</li>
+                <li>مهارة 3</li>
+                <li>مهارة 4</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>اللغات</h2>
+            <ul>
+                <li>اللغة 1 - مستوى الإتقان</li>
+                <li>اللغة 2 - مستوى الإتقان</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>المراجع</h2>
+            <p>متوفرة عند الطلب</p>
+        </div>
+    </div>
+</body>
+</html>
