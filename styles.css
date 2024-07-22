@@ -1,4 +1,4 @@
-/* styles.css */
+<!-- styles.css -->
 body, html {
     margin: 0;
     padding: 0;
@@ -7,16 +7,15 @@ body, html {
     color: #ccd6f6;
     height: 100%;
     overflow-x: hidden;
-    position: relative;
 }
 
-.stars-container {
+#stars-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
+    overflow: hidden;
     z-index: -1;
 }
 
@@ -25,7 +24,7 @@ body, html {
     margin: 0 auto;
     padding: 20px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
 }
 
 h1, h2, h3 {
@@ -57,71 +56,17 @@ a {
     margin-top: 20px;
 }
 
-/* Star animation styles */
 .star {
     position: absolute;
     background-color: #ffffff;
     border-radius: 50%;
-    opacity: 0.3;
-    animation: twinkle linear infinite;
 }
 
-@keyframes twinkle {
-    0% { opacity: 0.3; }
-    50% { opacity: 1; }
-    100% { opacity: 0.3; }
-}
+#stars { z-index: 0; }
+#stars2 { z-index: 1; }
+#stars3 { z-index: 2; }
 
-#stars, #stars2, #stars3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-#stars { z-index: 1; }
-#stars2 { z-index: 2; }
-#stars3 { z-index: 3; }
-
-/* CV specific styles */
-section {
-    margin-bottom: 30px;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .btn {
-        padding: 8px 16px;
-    }
-}
-
-/* RTL support for Arabic */
-[dir="rtl"] {
-    text-align: right;
-}
-
-[dir="rtl"] .language-buttons {
-    flex-direction: row-reverse;
+@keyframes animStar {
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
 }
