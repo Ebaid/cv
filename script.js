@@ -1,32 +1,26 @@
-// script.js
-function generateStars(id, count, size) {
+/* script.js */
+function generateStars(id, starCount, starSize) {
     const stars = document.getElementById(id);
-    const fragment = document.createDocumentFragment();
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
 
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < starCount; i++) {
         const star = document.createElement('div');
         star.className = 'star';
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        star.style.animationDelay = `${Math.random() * 2}s`;
-        fragment.appendChild(star);
+        star.style.width = `${starSize}px`;
+        star.style.height = `${starSize}px`;
+        star.style.left = `${Math.random() * screenWidth}px`;
+        star.style.top = `${Math.random() * screenHeight}px`;
+        star.style.animationDuration = `${50 + Math.random() * 100}s`;
+        star.style.animationDelay = `${Math.random() * 50}s`;
+        stars.appendChild(star);
     }
 
-    stars.appendChild(fragment);
+    stars.style.animation = `animStar ${50 + Math.random() * 100}s linear infinite`;
 }
 
-function initStars() {
-    generateStars('stars', 200, 1);
-    generateStars('stars2', 100, 2);
-    generateStars('stars3', 50, 3);
-}
-
-// Call initStars when the DOM is fully loaded
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initStars);
-} else {
-    initStars();
-}
+document.addEventListener('DOMContentLoaded', () => {
+    generateStars('stars', 800, 1);
+    generateStars('stars2', 200, 2);
+    generateStars('stars3', 100, 3);
+});
