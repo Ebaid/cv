@@ -260,6 +260,19 @@
 
         <a href="index.html" class="btn">Back to Language Selection</a>
     </div>
+     <script>
+        // Disable right-click menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable keyboard shortcuts for copying
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'a')) {
+                e.preventDefault();
+            }
+        });
+    </script>
 </body>
 
 </html>
